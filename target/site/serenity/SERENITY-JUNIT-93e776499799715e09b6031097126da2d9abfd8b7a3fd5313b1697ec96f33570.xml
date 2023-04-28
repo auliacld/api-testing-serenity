@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="As a user i want to get user information" skipped="0" tests="1" time="0.64" timestamp="2023-04-28 08:41:35"><testcase name="as user i input all valid data in get user information"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+starter.stepdef.GetUserInfoSteps.userHaveEndpointAuth(GetUserInfoSteps.java:15)&#13;
+✽.user have endpoint auth(file:///D:/D/QE_Alta/MiniProject/Altashop-API/src/test/resources/features/Authentication/GetUserInfo.feature:5)&#13;
+</system-err></testcase></testsuite>
