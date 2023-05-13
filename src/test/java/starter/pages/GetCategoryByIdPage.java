@@ -7,6 +7,7 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class GetCategoryByIdPage {
     public String endpoint = "https://altashop-api.fly.dev/api/categories";
+    public String invalidEndpoint = "https://altashop-api.fly.dev/api/category";
 
     @Step ("I set GET Category endpoint by id")
     public String getEndpointGetCategoryApi(){
@@ -31,5 +32,16 @@ public class GetCategoryByIdPage {
     @Step ("I send GET Category HTTP Request")
     public void getAllCategory() {
         SerenityRest.given().get(getApiAllCategory());
+    }
+
+    public String getWithInvalidEndpoint() { return invalidEndpoint;
+    }
+
+    public void sendInvalidEndpoint() {
+        SerenityRest.given().get(getWithInvalidEndpoint());
+    }
+
+    public void seeMessageCode() {
+        restAssuredThat(response -> response.statusCode(404));
     }
 }

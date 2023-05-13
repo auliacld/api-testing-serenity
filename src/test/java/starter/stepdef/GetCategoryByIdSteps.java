@@ -35,4 +35,16 @@ public class GetCategoryByIdSteps {
     public void userGetAllDetailCategory() {
         categoryID.getAllCategory();
     }
+
+    @Given("user has invalid endpoint for get detail category")
+    public void userHasInvalidEndpointForGetDetailCategory() { categoryID.getWithInvalidEndpoint();
+    }
+
+    @When("user send request to invalid endpoint category")
+    public void userSendRequestToInvalidEndpointCategory() { categoryID.sendInvalidEndpoint();
+    }
+
+    @Then("user see error status code {int}")
+    public void userSeeErrorStatusCode(int arg0) { categoryID.seeMessageCode();
+    }
 }
